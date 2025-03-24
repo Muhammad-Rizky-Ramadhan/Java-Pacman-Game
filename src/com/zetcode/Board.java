@@ -37,7 +37,9 @@ public class Board extends JPanel implements ActionListener {
     private final int PAC_ANIM_DELAY = 2;
     private final int PACMAN_ANIM_COUNT = 4;
     private final int MAX_GHOSTS = 12;
-    private final int PACMAN_SPEED = 6;
+    //testing
+    public int PACMAN_SPEED = 6;
+    //private final int PACMAN_SPEED = 6; (original)
 
     private int pacAnimCount = PAC_ANIM_DELAY;
     private int pacAnimDir = 1;
@@ -52,7 +54,7 @@ public class Board extends JPanel implements ActionListener {
     private Image pacman3up, pacman3down, pacman3left, pacman3right;
     private Image pacman4up, pacman4down, pacman4left, pacman4right;
 
-    private int pacman_x, pacman_y, pacmand_x, pacmand_y;
+    public int pacman_x, pacman_y, pacmand_x, pacmand_y;
     private int req_dx, req_dy, view_dx, view_dy;
 
     private final short levelData[] = {
@@ -77,7 +79,9 @@ public class Board extends JPanel implements ActionListener {
     private final int maxSpeed = 6;
 
     private int currentSpeed = 3;
-    private short[] screenData;
+
+    public short[] screenData;
+//    private short[] screenData; (original)
     private Timer timer;
 
     public Board() {
@@ -299,7 +303,9 @@ public class Board extends JPanel implements ActionListener {
         g2d.drawImage(ghost, x, y, this);
     }
 
-    private void movePacman() {
+    //test
+    public void movePacman() {
+//        private void movePacman() {
 
         int pos;
         short ch;
